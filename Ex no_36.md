@@ -1,29 +1,64 @@
-# Task - Hackerrank Problem
+#  Hackerrank problem - 2
 
-This challenge requires you to print Hello Saveetha! on a single line, and then print the already provided input string to stdout. If you are not familiar with C, you may want to read about the printf() command.
+Your task is to take two numbers of int data type, two numbers of float data type as input and output their sum:
 
-# Example:
+Declare 4 variables: two of type int and two of type float.
 
-Saveetha
+Read 2 lines of input from stdin (according to the sequence given in the 'Input Format' section below) and initialize your variables.
 
-The required output is: Hello, Saveetha! C Programming
+Use the + and - operator to perform the following operations:
 
-# EX 36 C program to to print Hello Saveetha! on a single line, and then print the already provided input string to stdout.
+Print the sum and difference of two int variable on a new line.
+
+Print the sum and difference of two float variable rounded to one decimal place on a new line.
+
+## Input Format
+
+The first line contains two integers.
+
+The second line contains two floating point numbers.
+
+## Constraints 
+
+1 ≤ integer variables ≤ 104
+
+1 ≤ float variables ≤ 104
+
+## Output Format
+
+Print the sum and difference of both integers separated by a space on the first line, and the sum and difference of both float (scaled to 1 decimal place) separated by a space on the second line.
+
+Sample Input 
+
+10 4
+
+4.0 2.0
+
+Sample Output 
+
+14 6
+
+6.0 2.0
+
+Explanation
+
+When we sum the integers 10 and 4, we get the integer 14. When we subtract the second number 4 from the first number 10, we get 6 as their difference.
+
+When we sum the floating-point numbers 4.0 and 2.0, we get 6.0. When we subtract the second number 2.0 from the first number 4.0, we get 2.0 as their difference.
+# EX 31 C program to find the smallest among three numbers using Structure.
 # DATE:
 # AIM:
-To write a C program to print Hello Saveetha! on a single line, and then print the already provided input string to stdout.
-
+To write a C program to find the smallest among three numbers using Structure.
 # Algorithm
+1.Start the program and define a structure with three integer fields.
 
-1.Start the program and declare a character array to store the input string.
+2.Declare a structure variable to store the three numbers.
 
-2.Use gets() or fgets() to read a line of input from the user.
+3.Read the values of the three numbers from the user.
 
-3.Print "Hello Saveetha!" on the first line.
+4.Compare the three numbers to find the smallest.
 
-4.Print the user-provided input string on the next line.
-
-5.End the program.
+5.Display the smallest number and end the program.
 # Program:
 ```
 /*
@@ -31,20 +66,38 @@ C program to find the smallest among three numbers using Structure.
 */
 #include <stdio.h>
 
+struct Numbers
+{
+    int num1, num2, num3;
+};
+
 int main()
 {
-    char input[100];
+    struct Numbers n;
 
-    fgets(input, sizeof(input), stdin);
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &n.num1, &n.num2, &n.num3);
 
-    printf("Hello Saveetha!\n");
-    printf("%s", input);
+    int smallest = n.num1;
+
+    if(n.num2 < smallest)
+    {
+        smallest = n.num2;
+    }
+
+    if(n.num3 < smallest)
+    {
+        smallest = n.num3;
+    }
+
+    printf("The smallest number is: %d\n", smallest);
 
     return 0;
 }
+
 ```
 # Output:
-<img width="702" height="216" alt="image" src="https://github.com/user-attachments/assets/4ab7e4d5-3e47-4493-8c38-6a0dd3d9f035" />
+<img width="851" height="202" alt="image" src="https://github.com/user-attachments/assets/04510948-312b-484f-b0f5-66a127573c4b" />
 
 
 # Result:
